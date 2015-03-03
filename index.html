@@ -2,7 +2,9 @@
 	<script src="jquery.js"></script>
 
 	<body>
-		<button name="aaaa" value="clica aqui" id="aaaa">
+		<button name="aaaa" value="clica aqui" id="aaaa">BTN
+		</button>
+		<button name="bbbb" value="clica aqui" id="bbbb"> BTN JSON
 		</button>
 	<div class="result">
 
@@ -16,6 +18,18 @@
 
 			$.get(orig, function( data ) {
 			$( ".result" ).html( data );
+			});
+		});
+
+
+
+		$( "#bbbb" ).click(function() {
+			$.getJSON("http://www.franciscoribeiro.net/loc.json", function( data ) {
+			
+				$.each( data, function( key, val ) {
+				$( "body" ).append('<h1>' + key + '::' + val + '</h1>');
+
+			});
 			});
 		});
 
