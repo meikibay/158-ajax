@@ -11,7 +11,10 @@
 
 	<script>
 		$( "#aaaa" ).click(function() {
-			$.get( "localidades.html", function( data ) {
+			orig = "http://www.franciscoribeiro.net/localidades.html";
+			//orig = "file:///D:/IEFP/Francisco/ufcd158/158-ajax/localidades.html";
+
+			$.get(orig, function( data ) {
 			$( ".result" ).html( data );
 			});
 		});
