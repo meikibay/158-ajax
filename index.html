@@ -6,6 +6,9 @@
 		</button>
 		<button name="bbbb" value="clica aqui" id="bbbb"> BTN JSON
 		</button>
+		<button name="cccc" value="clica aqui" id="cccc"> BT PESSOA
+		</button>
+
 	<div class="result">
 
 	</div>		
@@ -28,6 +31,17 @@
 			
 				$.each( data, function( key, val ) {
 				$( "body" ).append('<h1>' + key + '::' + val + '</h1>');
+
+			});
+			});
+		});
+
+		$( "#cccc" ).click(function() {
+			servidor = "http://www.franciscoribeiro.net/"
+			$.getJSON( servidor + "pessoa1.json", function( data ) {
+			
+				$( "body" ).append('<div> nome:' + data['nome'] + '</div>')
+				$( "body" ).append('<div> nac.:' + data['nacionalidade'] + '</div>')
 
 			});
 			});
