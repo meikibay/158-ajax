@@ -1,0 +1,42 @@
+<html>
+	<script src="jquery.js"></script>
+
+	<body>
+		<button name="btn" id="flickr">Flickr
+
+		</button>
+
+		<div class="show">
+
+		</div>
+	</body>
+
+	<script>
+		$( "#flickr" ).click(function() {
+			$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=21088294@N00&format=json&jsoncallback=", function( data ) {
+				$( ".body" ).append( data );
+				alert('fghjkl');
+
+
+			// 	$.each( data, function( data ) {
+
+			// 	$( "body" ).append( data );
+
+			// });
+			});
+		});
+
+
+
+
+
+
+		<!--	
+		//orig = "http://api.flickr.com/services/feeds/photos_public.gne?id=21088294@N00&format=json&jsoncallback=";
+
+			//$data.items[1].media.m;
+			//$data.items[2].media.m;
+			//});
+-->
+	</script>
+</html>
