@@ -13,14 +13,14 @@
 
 	<script>
 		$( "#flickr" ).click(function() {
-			$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=21088294@N00&format=json&jsoncallback=", function( data ) {
-				$( ".body" ).append( data );
+			$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=21088294@N00&format=json&jsoncallback=?", function( data ) {
+				$( "body" ).append('data' );
 				alert('fghjkl');
 
 
 			// 	$.each( data, function( data ) {
 
-			// 	$( "body" ).append( data );
+			$( "body" ).append( data.items[1]["date_taken"]['media']);
 
 			// });
 			});
